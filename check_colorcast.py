@@ -94,10 +94,16 @@ def NNO(h, w, image):
     except:
         if D_sigma == 0:
             D_sigma_cr = 0
+        else:
+            D_sigma_cr = (D_sigma - D_sigma_nno)/D_sigma
         if u == 0:
             u_cr = 0
+        else:
+            u_cr = (u - u_nno)/u
         if sigma == 0:
             sigma_cr = 0
+        else:
+            sigma_cr = (sigma - sigma_nno)/sigma
     return D_sigma_cr, u_cr, sigma_cr,D_sigma_nno
 
 def check_cast(image, h, w, l, lab):
